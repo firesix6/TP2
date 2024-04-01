@@ -32,3 +32,5 @@ justification:
 
 5-pour etre sure que le joueur ne touche pas les des, on peut lever une exception quand la fonction debiter est appelé
 ->si on parle de la verification que le jeu reagit correctement, on peut dire que c un test d'etat, par contre si on veut savoir si le joueur ne touche pas les des apres, on peut dire que c un test d'interaction 
+
+to be continued...
