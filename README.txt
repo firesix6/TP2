@@ -6,4 +6,10 @@ On fait deux type de test, pour la creation adequate et correcte du user
 et un autre pour la creation d'un utilisateur qui engendre une exception
 --------------------------------------------------------------------------
 Exo3 :
-Pas encore fini...
+1- traitement d'exception avec le try-catch
+2- les erreurs de validation: on cree une methode de validation pour etre sure qu'elle n'est pas appelé et cella en utilisant le never
+3- pour l'identifiant, de la meme maniere on cree une methode getId pour faire la verif avec le champs id ajouter aussi 
+4- pour les argument on utilise les capteur d'argument et on fait la verif de tout les argument passé connu 
+-------------------------------------------------------------------------
+EXO4 : 
+en cours...
