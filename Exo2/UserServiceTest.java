@@ -19,7 +19,7 @@ class UserServiceTest {
     void creerUtilisateur() throws ServiceException  {
 
         // Création d'un nouvel utilisateur
-        Utilisateur utilisateur = new Utilisateur("Jean", "Dupont", "jeandupont@email.com");
+        Utilisateur utilisateur = new Utilisateur("Nana", "nars", "nananars@email.com");
 
         // TODO : Configuration du comportement du mock, utiliser la
         //directive « when » avec sa méthode « thenReturn »
