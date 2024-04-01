@@ -5,3 +5,5 @@ EXO2:
 On fait deux type de test, pour la creation adequate et correcte du user
 et un autre pour la creation d'un utilisateur qui engendre une exception
 --------------------------------------------------------------------------
+Exo3 :
+Pas encore fini...
