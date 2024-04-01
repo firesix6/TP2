@@ -4,7 +4,8 @@ import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.mockito.Mockito.mock;
+import static org.mockito.ArgumentMatchers.anyInt;
+import static org.mockito.Mockito.*;
 
 class JeuClassTest {
 
@@ -30,4 +31,29 @@ class JeuClassTest {
     }
 
     //************** QST5 : JOUEUR INSOLAVBLE
+    // Création des doublures (mocks)
+
+    Joueur joueurInsolvable = mock(Joueur.class);
+    De de1 = mock(De.class);
+    De de2 = mock(De.class);
+    Banque banque = mock(Banque.class);
+    @Test
+    void testJoueurInsolvable() throws JeuFermeException, DebitImpossibleException {
+
+        // Configuration du joueur insolvable pour lancer une exception lorsqu'il est débité
+        doThrow(new DebitImpossibleException()).when(joueurInsolvable).debiter(anyInt());
+
+        // Création du jeu avec la banque
+        JeuClass jeu = new JeuClass(banque);
+
+        // Exécution du test
+        //jeu.jouer(joueurInsolvable, de1, de2);
+        assertThrows(JeuFermeException.class, () -> jeu.jouer(joueurInsolvable, de1, de2));
+
+        // Vérification que le jeu n'a pas touché aux dés
+        verifyNoInteractions(de1, de2);
+
+        // Vérification que la banque n'a pas été sollicitée
+        verifyNoInteractions(banque);
+    }
 }
