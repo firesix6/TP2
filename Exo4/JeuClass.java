@@ -1,9 +1,11 @@
 package org.example;
 public class JeuClass {
     private Banque banque;
+    private boolean ferme;
 
     public JeuClass(Banque labanque) {
         this.banque = labanque;
+        this.ferme = false;
     }
 
     public void jouer(Joueur joueur, De de1, De de2) throws JeuFermeException {
@@ -31,10 +33,12 @@ public class JeuClass {
 
     public void fermer() {
         // Fermeture du jeu
+        this.ferme = true;
     }
 
     public boolean estOuvert() {
         // Vérification si le jeu est ouvert
+        if (ferme) return false; 
         return true;
     }
 }
