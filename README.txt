@@ -16,3 +16,19 @@ EXO4 :
 justification: 
 -> le joueur doit proposer une mise et etre debite du montant de son pari
 -> les dés pour generer les resultats aleatoire
+
+2- les classes d'equivalence: 
+-> jouer non solvable : perdre
+-> la somme ne vaut pas 7 : perdre
+-> la somme = 7 et banque solvable : Gagner
+-> la somme = 7 et banque non solvable : perdre
+
+
+3- codage
+
+4- pour le cas de fermé, on peut confondre entre un test d'etat et test d'interaction, car plusieur interaction sont impliquer pour savoir si c fermé ou pas, mais l'information principale est l'etat interne de la classe Jeu 
+-> pour l'implemetation, on verifie directement si le jeu est fermer ou pas 
+(j'ai essayer de confirmer cella avec VerifyInteraction aussi, pour etre sure qu'aucune interaction n'a eu lieu !)
+
+5-pour etre sure que le joueur ne touche pas les des, on peut lever une exception quand la fonction debiter est appelé
+->si on parle de la verification que le jeu reagit correctement, on peut dire que c un test d'etat, par contre si on veut savoir si le joueur ne touche pas les des apres, on peut dire que c un test d'interaction 

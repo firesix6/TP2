@@ -38,7 +38,7 @@ public class JeuClass {
 
     public boolean estOuvert() {
         // Vérification si le jeu est ouvert
-        if (ferme) return false; 
+        if (ferme) return false;
         return true;
     }
 }
