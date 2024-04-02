@@ -6,4 +6,5 @@ public interface Joueur {
     void debiter(int mise) throws DebitImpossibleException;
 
     void crediter(int i);
+    boolean joueurEstSolvable(int mise);
 }

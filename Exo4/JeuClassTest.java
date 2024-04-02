@@ -47,8 +47,8 @@ class JeuClassTest {
         JeuClass jeu = new JeuClass(banque);
 
         // Exécution du test
-        //jeu.jouer(joueurInsolvable, de1, de2);
-        assertThrows(JeuFermeException.class, () -> jeu.jouer(joueurInsolvable, de1, de2));
+        // jeu.jouer(joueurInsolvable, de1, de2);
+        assertThrows(DebitImpossibleException.class, () -> jeu.jouer(joueurInsolvable, de1, de2));
 
         // Vérification que le jeu n'a pas touché aux dés
         verifyNoInteractions(de1, de2);

@@ -8,12 +8,18 @@ public class JeuClass {
         this.ferme = false;
     }
 
-    public void jouer(Joueur joueur, De de1, De de2) throws JeuFermeException {
+    public void jouer(Joueur joueur, De de1, De de2) throws JeuFermeException, DebitImpossibleException {
         if (!estOuvert()) {
             throw new JeuFermeException("Le jeu est fermé.");
         }
 
+
         int mise = joueur.mise();
+
+        if (!joueur.joueurEstSolvable(mise)) {
+            throw new DebitImpossibleException("Le joueur est insolvable.");
+        }
+
         joueur.debiter(mise);
         int resultatDe1 = de1.lancer();
         int resultatDe2 = de2.lancer();
