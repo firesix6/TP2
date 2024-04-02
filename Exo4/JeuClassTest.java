@@ -41,7 +41,7 @@ class JeuClassTest {
     void testJoueurInsolvable() throws JeuFermeException, DebitImpossibleException {
 
         // Configuration du joueur insolvable pour lancer une exception lorsqu'il est débité
-        doThrow(new DebitImpossibleException()).when(joueurInsolvable).debiter(anyInt());
+        doThrow(new DebitImpossibleException("Joueur Insolavable")).when(joueurInsolvable).debiter(anyInt());
 
         // Création du jeu avec la banque
         JeuClass jeu = new JeuClass(banque);
