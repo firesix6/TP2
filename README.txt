@@ -18,10 +18,10 @@ justification:
 -> les dés pour generer les resultats aleatoire
 
 2- les classes d'equivalence: 
--> jouer non solvable : perdre
--> la somme ne vaut pas 7 : perdre
+-> jouer non solvable : perdre/fermer
+-> la somme ne vaut pas 7 : perdre/fermer
 -> la somme = 7 et banque solvable : Gagner
--> banque non solvable : perdre
+-> banque non solvable : perdre/fermer
 
 
 3- codage
