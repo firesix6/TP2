@@ -21,7 +21,7 @@ justification:
 -> jouer non solvable : perdre
 -> la somme ne vaut pas 7 : perdre
 -> la somme = 7 et banque solvable : Gagner
--> la somme = 7 et banque non solvable : perdre
+-> banque non solvable : perdre
 
 
 3- codage
