@@ -35,3 +35,5 @@ justification:
 
 6- on ajoute les deux scenario ou le joueur gagne (somme = 7 et banque solvable )
 aussi le cas ou la somme = 7 mais la banque est insolvable ce qui fait fermer le jeu.
+
+7- pour cette question, je cree une nouvelle classe BanqueImpl pour ajouter le seuil, et une nouvelle JeuClassNew pour verifier la banque
