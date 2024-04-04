@@ -18,10 +18,10 @@ justification:
 -> les dés pour generer les resultats aleatoire
 
 2- les classes d'equivalence: 
--> jouer non solvable : perdre
--> la somme ne vaut pas 7 : perdre
+-> jouer non solvable : perdre/fermer
+-> la somme ne vaut pas 7 : perdre/fermer
 -> la somme = 7 et banque solvable : Gagner
--> la somme = 7 et banque non solvable : perdre
+-> banque non solvable : perdre/fermer
 
 
 3- codage
@@ -33,4 +33,7 @@ justification:
 5-pour etre sure que le joueur ne touche pas les des, on peut lever une exception quand la fonction debiter est appelé
 ->si on parle de la verification que le jeu reagit correctement, on peut dire que c un test d'etat, par contre si on veut savoir si le joueur ne touche pas les des apres, on peut dire que c un test d'interaction 
 
-to be continued...
+6- on ajoute les deux scenario ou le joueur gagne (somme = 7 et banque solvable )
+aussi le cas ou la somme = 7 mais la banque est insolvable ce qui fait fermer le jeu.
+
+7- pour cette question, je cree une nouvelle classe BanqueImpl pour ajouter le seuil, et une nouvelle JeuClassNew pour verifier la banque
