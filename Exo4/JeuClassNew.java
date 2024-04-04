@@ -1,9 +1,11 @@
 package org.example;
-public class JeuClass {
-    private Banque banque;
+
+public class JeuClassNew {
+
+    private BanqueImpl banque;
     private boolean ferme;
 
-    public JeuClass(Banque labanque) {
+    public JeuClassNew(BanqueImpl labanque) {
         this.banque = labanque;
         this.ferme = false;
     }
@@ -27,6 +29,10 @@ public class JeuClass {
             if (banque.est_solvable()) {
                 joueur.crediter(2 * mise);
                 banque.debiter(2 * mise);
+                if(!banque.est_solvable()){
+                    fermer();
+                    throw new JeuFermeException("La banque n'est plus solvable.");
+                }
             } else {
                 fermer();
                 throw new JeuFermeException("La banque n'est plus solvable.");
@@ -47,3 +53,4 @@ public class JeuClass {
         return true;
     }
 }
+
