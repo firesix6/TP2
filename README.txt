@@ -13,10 +13,11 @@ Exo3 :
 4- pour les argument on utilise les capteur d'argument et on fait la verif de tout les argument passé connu 
 -------------------------------------------------------------------------
 EXO4 : 
-1- les objets mockés pour tester ka methode jouer sont: l'objet joueur et les deux objets dé
+1- les objets mockés pour tester ka methode jouer sont: l'objet joueur, banque et les deux objets dé
 justification: 
 -> le joueur doit proposer une mise et etre debite du montant de son pari
--> les dés pour generer les resultats aleatoire
+-> les dés pour generer les resultats aleatoire 
+-> la banque pour pouvoir cree une instance jeu 
 
 2- les classes d'equivalence: 
 -> jouer non solvable : perdre/fermer
