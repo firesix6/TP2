@@ -18,12 +18,10 @@ class JeuClassTest {
     void testJouerQuandJeuEstFerme() {
 
         JeuClass jeu = new JeuClass(banque);
-        jeu.fermer(); // On ferme le jeu
+        jeu.fermer(); // ferme le jeu
 
-        // Act & Assert
         assertThrows(JeuFermeException.class, () -> jeu.jouer(joueur, de1, de2));
 
-        // Vérification qu'aucune interaction n'a lieu avec les autres objets
         verifyNoInteractions(joueur, de1, de2, banque);
     }
 
@@ -32,20 +30,14 @@ class JeuClassTest {
     @Test
     void testJoueurInsolvable() throws DebitImpossibleException {
 
-        // Configuration du joueur insolvable pour lancer une exception lorsqu'il est débité
         doThrow(new DebitImpossibleException("Joueur Insolavable")).when(joueur).debiter(anyInt());
 
-        // Création du jeu avec la banque
         JeuClass jeu = new JeuClass(banque);
-
-        // Exécution du test
         // jeu.jouer(joueurInsolvable, de1, de2);
         assertThrows(DebitImpossibleException.class, () -> jeu.jouer(joueur, de1, de2));
 
-        // Vérification que le jeu n'a pas touché aux dés
         verifyNoInteractions(de1, de2);
 
-        // Vérification que la banque n'a pas été sollicitée
         verifyNoInteractions(banque);
     }
 
